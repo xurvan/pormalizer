@@ -284,11 +284,12 @@ class Pormalizer:
             '\uFEC5': '\u0638',  # ARABIC LETTER ZAH ISOLATED FORM
             '\uFBAC': '\u0647',  # ARABIC LETTER HEH DOACHASHMEE INITIAL FORM
             '\uFE9B': '\u062B',  # ARABIC LETTER THEH INITIAL FORM
-            '\u06CA': '\u0648'  # ARABIC LETTER WAW WITH TWO DOTS ABOVE
+            '\u06CA': '\u0648',  # ARABIC LETTER WAW WITH TWO DOTS ABOVE
+            '\u0622': '\u0627'  # ARABIC LETTER ALEF WITH MADDA ABOVE
         }
 
     def normalize(self, text: str) -> str:
-        text = unicodedata.normalize('NFKD', text)
+        text = unicodedata.normalize('NFKC', text)
         temp = ''
 
         for c in text:
