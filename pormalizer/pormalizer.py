@@ -291,8 +291,13 @@ class Pormalizer:
     def normalize(self, text: str) -> str:
         text = unicodedata.normalize('NFKC', text)
         temp = ''
+        length = len(text)
 
-        for c in text:
+        for i, c in enumerate(text):
+            if c == '/' and 0 < i < length - 1 and text[i - 1].isnumeric() and text[i + 1].isnumeric():
+                temp += '.'
+                continue
+
             if c in self.valid_chars:
                 temp += c
                 continue
