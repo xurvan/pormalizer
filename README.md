@@ -29,6 +29,6 @@ from pormalizer import Pormalizer
 
 pormalizer = Pormalizer()
 
-pormalizer.normalize("متن امتحانی")
-
+normalized_text = pormalizer.normalize("متن امتحانی")
+print(normalized_text)
 ```
