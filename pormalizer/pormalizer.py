@@ -49,7 +49,7 @@ class Pormalizer:
             '\u0036',  # DIGIT SIX
             '\u0037',  # DIGIT SEVEN
             '\u0038',  # DIGIT EIGHT
-            '\u0039'  # DIGIT NINE
+            '\u0039',  # DIGIT NINE
         ]
         self.replace_map = {
             '\u0660': '\u0030',  # ARABIC-INDIC DIGIT ZERO
@@ -285,7 +285,7 @@ class Pormalizer:
             '\uFBAC': '\u0647',  # ARABIC LETTER HEH DOACHASHMEE INITIAL FORM
             '\uFE9B': '\u062B',  # ARABIC LETTER THEH INITIAL FORM
             '\u06CA': '\u0648',  # ARABIC LETTER WAW WITH TWO DOTS ABOVE
-            '\u0622': '\u0627'  # ARABIC LETTER ALEF WITH MADDA ABOVE
+            '\u0622': '\u0627',  # ARABIC LETTER ALEF WITH MADDA ABOVE
         }
 
     def normalize(self, text: str) -> str:
