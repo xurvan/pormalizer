@@ -22,7 +22,7 @@ python setup.py install
 
 ## Quickstart
 
-A very simple usage could be like:
+You have to first create and instance of "Pormalizer" class then you can use "normalize" method:
 
 ```python
 from pormalizer import Pormalizer
